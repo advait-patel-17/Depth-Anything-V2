@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depth-anything-v2"
+version = "0.0.0"
+description = "Depth Anything V2 (packaged from upstream repo)"
+requires-python = ">=3.8"
+dependencies = [
+  "torch>=2.0",
+  "torchvision",
+  "opencv-python",
+  "numpy",
+  "timm>=0.9",
+  "einops",
+  "huggingface-hub>=0.20"
+]
+
+[tool.setuptools.packages.find]
+include = ["depth_anything_v2*", "metric_depth*"]
+
+[tool.setuptools]
+include-package-data = true
